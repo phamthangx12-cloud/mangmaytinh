@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MMT Lab – Học Mạng Máy Tính từ gói tin đến ứng dụng</title>
+  <meta name="description" content="Khóa học Mạng Máy Tính tương tác: 5 chương, 33 bài, mô phỏng, luyện đề và thẻ ghi nhớ.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#/home" aria-label="MMT Lab – Trang chủ">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M7 11 17 7M7 13l10 4"/></svg>
+      </span>
+      <span><strong>MMT</strong><small>LAB</small></span>
+    </a>
+
+    <div class="sidebar-scroll">
+      <nav class="lesson-nav" id="lessonNav" aria-label="Nội dung khóa học">
+        <button class="nav-item nav-home" data-section="home">
+          <span class="nav-number">00</span><span>Tổng quan khóa học</span>
+        </button>
+      </nav>
+      <div class="nav-tools">
+        <button class="nav-item" data-section="practice">
+          <span class="nav-icon">✎</span><span>Luyện đề & kiểm tra</span>
+        </button>
+        <button class="nav-item" data-section="flashcards">
+          <span class="nav-icon">▤</span><span>Thẻ ghi nhớ thuật ngữ</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="sidebar-progress">
+      <div class="progress-heading"><span>Tiến độ khóa học</span><strong id="progressText">0%</strong></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <small class="progress-detail" id="progressDetail">0 bài đã học</small>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="menu-button" id="menuButton" aria-label="Mở menu">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <div class="breadcrumb"><span id="crumbChapter">Khóa học</span><b>/</b><strong id="crumbTitle">Tổng quan</strong></div>
+      <div class="top-actions">
+        <button class="icon-button" id="searchButton" aria-label="Tìm kiếm" aria-expanded="false">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m16 16 4 4"/></svg>
+        </button>
+        <button class="avatar" aria-label="Hồ sơ cá nhân">A</button>
+      </div>
+    </header>
+
+    <div class="search-panel" id="searchPanel">
+      <div class="search-box">
+        <input id="searchInput" type="search" placeholder="Tìm bài học, thuật ngữ: NAT, CRC, slow start, ARP…" autocomplete="off" aria-label="Tìm kiếm nội dung">
+        <button id="closeSearch" aria-label="Đóng tìm kiếm">Đóng</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+
+    <div class="content" id="content"></div>
+
+    <footer class="site-footer">
+      <span>MMT Lab · Ôn tập Mạng Máy tính theo 5 chương</span>
+      <span>Tiến độ được lưu tự động trên trình duyệt của bạn.</span>
+    </footer>
+  </main>
+
+  <div class="scrim" id="scrim"></div>
+
+  <div class="quiz-modal" id="quizModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="quizQuestion">
+    <div class="quiz-dialog">
+      <button class="quiz-close" id="quizClose" aria-label="Đóng câu hỏi">×</button>
+      <span class="eyebrow" id="quizEyebrow">CÂU HỎI NHANH</span>
+      <h2 id="quizQuestion"></h2>
+      <div class="quiz-options" id="quizOptions"></div>
+      <p class="quiz-result" id="quizResult"></p>
+      <div class="quiz-dialog-actions">
+        <button class="secondary-button" id="quizNext" hidden>Câu tiếp theo →</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="data-ch1.js"></script>
+  <script src="data-ch2.js"></script>
+  <script src="data-ch3.js"></script>
+  <script src="data-ch4.js"></script>
+  <script src="data-ch5.js"></script>
+  <script src="quizzes.js"></script>
+  <script src="flashcards.js"></script>
+  <script src="widgets.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
